@@ -15,12 +15,13 @@ return new class extends Migration
     {
         Schema::create('siswas', function (Blueprint $table) {
             $table->id();
-            $table->string('nipd');
+            $table->string('nim')->unique();
             $table->string('nama');
-            $table->unsignedBigInteger('kelas_id');
-            $table->foreign('kelas_id')->references('id')->con('kelas')->onDelete('cascade');
-            $table->date('tgl_lahir');
             $table->string('tempat_lahir');
+            $table->date('tanggal_lahir');
+            $table->enum('jenis_kelamin',['L','P']);
+            $table->bigInteger('kelas_id');
+            $table->string('agama');
             $table->timestamps();
         });
     }
