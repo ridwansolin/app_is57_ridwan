@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KelasController;
 use App\Http\Controllers\SiswaController;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,13 +17,9 @@ use App\Http\Controllers\SiswaController;
 
 Route::get('/', function () {
     return view('home');
-});
+})->middleware('auth');
 
-
-Route::get('/home', function () {
-    return view('layouts.master');
-});
-// Auth::routes();
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

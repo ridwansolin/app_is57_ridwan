@@ -219,7 +219,7 @@
                 </a>
                 <li class="nav-item">
                 <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-table"></i>
+                  <i class="nav-icon fa fa-database"></i>
                   <p>
                     DATA SISWA
                     <i class="fas fa-angle-left right"></i>
@@ -228,13 +228,13 @@
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
                     <a href="/kelas" class="nav-link  @yield('navkelas')">
-                      <i class="far fa-circle nav-icon"></i>
+                      <i class="fa fa-home nav-icon"></i>
                       <p>Kelas</p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="/siswa" class="nav-link  @yield('navsiswa')">
-                      <i class="far fa-circle nav-icon"></i>
+                      <i class="fa fa-users nav-icon"></i>
                       <p>Siswa</p>
                     </a>
                   </li>
@@ -242,15 +242,9 @@
               </li>
               <li class="nav-header">LABELS</li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/logout" class="nav-link" data-toggle="modal" data-target="#logoutModal">
                   <i class="nav-icon far fa-circle text-danger"></i>
-                  <p class="text">Logout</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon far fa-circle text-warning"></i>
-                  <p>Warning</p>
+                  <p class="text">Log Out</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -284,6 +278,32 @@
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">PERINGATAN !!!</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Apakah Anda Yakin Ingin Keluar</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                <a class="btn btn-primary" href="{{route('logout')}}"
+                onclick="event.preventDefault();
+                              document.getElementById('logout-form').submit();">
+                 {{ __('Logout') }}
+             </a>
+
+             <form id="logout-form" action="{{route('logout')}}" method="POST" class="d-none">
+                 @csrf
+             </form>
+            </div>
+        </div>
+    </div>
+</div> 
 
 <!-- jQuery -->
 <script src="{{asset('plugins/jquery/jquery.min.js')}}"></script>
