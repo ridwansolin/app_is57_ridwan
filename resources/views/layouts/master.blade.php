@@ -242,17 +242,20 @@
               </li>
               <li class="nav-header">LABELS</li>
               <li class="nav-item">
-                <a href="/logout" class="nav-link" data-toggle="modal" data-target="#logoutModal">
-                  <i class="nav-icon far fa-circle text-danger"></i>
-                  <p class="text">Log Out</p>
-                </a>
-              </li>
-              <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="nav-icon far fa-circle text-info"></i>
                   <p>Informational</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="/logout" class="nav-link" data-toggle="modal" data-target="#logoutModal">
+                  <button class="btn btn-transfaran" type="button" disabled>
+                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    Log Out
+                  </button>
+                </a>
+              </li>
+              
             </ul>
           </nav>
           <!-- /.sidebar-menu -->
