@@ -20,8 +20,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('/welcome', function () {
-    return view('layouts.welcome');
+Route::get('/home', function () {
+    return view('layouts.master');
 });
 // Auth::routes();
 
