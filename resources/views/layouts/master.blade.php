@@ -46,9 +46,6 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="index3.html" class="nav-link">Home</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
     </ul>
 
     <!-- Right navbar links -->
@@ -274,13 +271,13 @@
         <!-- Control sidebar content goes here -->
       </aside>
 
-  <footer class="main-footer">
+  {{-- <footer class="main-footer">
     <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 3.1.0
     </div>
-  </footer>
+  </footer> --}}
 
   <!-- Control Sidebar -->
   
