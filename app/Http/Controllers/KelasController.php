@@ -36,6 +36,8 @@ class KelasController extends Controller
      */
     public function store(Request $request)
     {
+        $this->authorize('create',Kelas::class);
+
         $kelas = new Kelas;
 
         $kelas->nama_kelas = $request->nm;

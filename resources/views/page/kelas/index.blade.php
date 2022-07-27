@@ -25,7 +25,11 @@
 
 <div class="container  bg-white mt-3 p-4">
     {{-- <h1>Data Jurusan</h1> --}}
-    <a href="/kelas/form" class="btn btn-primary">Tambah Data</a>
+   @can('create',App\Kelas::Class)
+   <a href="/kelas/form" class="btn btn-primary">Tambah Data</a>   
+   @endcan
+    
+        
     <br>
     <br>
     <div class="card">
@@ -46,6 +50,7 @@
                         <tr>
                             <th scope="row">{{$nomor++}}</th>
                             <td>{{$item->nama_kelas}}</td>
+                            
                             <td>
                                 <a href="/kelas/edit/{{$item->id}}" class="btn btn-success btn-sm">edit</a>
                                 
@@ -69,8 +74,9 @@
           <form method="POST" action="/kelas/{{$item->id}}">
           @csrf
           @method ('DELETE')
-
-      <button type="submit" class="btn btn-danger ">Hapus</button>
+          @can('create',App\Kelas::Class)
+              <button type="submit" class="btn btn-danger ">Hapus</button>
+          @endcan
           </form>
       </div>
     </div>

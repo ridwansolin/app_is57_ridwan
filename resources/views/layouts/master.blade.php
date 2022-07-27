@@ -225,6 +225,7 @@
                     <i class="fas fa-angle-left right"></i>
                   </p>
                 </a>
+                
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
                     <a href="/kelas" class="nav-link  @yield('navkelas')">
@@ -232,6 +233,7 @@
                       <p>Kelas</p>
                     </a>
                   </li>
+                  
                   <li class="nav-item">
                     <a href="/siswa" class="nav-link  @yield('navsiswa')">
                       <i class="fa fa-users nav-icon"></i>

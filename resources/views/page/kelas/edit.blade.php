@@ -36,7 +36,9 @@
                     <label for="exampleInputEmail1" class="form-label">Nama Kelas</label>
                     <input type="text" value="{{$kelas->nama_kelas}}" name="nm" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
+                @can('create',App\Kelas::Class)
                 <button type="submit" class="btn btn-primary">Edit Data</button>
+                @endcan
                 <a href="/kelas" class="btn btn-warning">Batal</a>
             </form>
         </div>

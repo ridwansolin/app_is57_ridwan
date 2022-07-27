@@ -81,8 +81,9 @@
             <option value="Konghucu">Konghucu</option>
         </select>
     </div>
-
+              @can('create',App\Kelas::Class)
                 <button type="submit" class="btn btn-primary">Edit Data</button>
+              @endcan
                 <a href="/siswa" class="btn btn-warning">Batal</a>
             </form>
         </div>

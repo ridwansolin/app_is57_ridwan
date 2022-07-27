@@ -25,7 +25,9 @@
 
 <div class="container  bg-white mt-3 p-4">
     {{-- <h1>Data Jurusan</h1> --}}
+    @can('create',App\Kelas::Class)
     <a href="/siswa/form" class="btn btn-primary">Tambah Data</a>
+    @endcan
     <br>
     <br>
     <div class="card">
@@ -83,8 +85,9 @@
           <form method="POST" action="/siswa/{{$item->id}}">
           @csrf
           @method ('DELETE')
-
-      <button type="submit" class="btn btn-danger ">Hapus</button>
+          @can('create',App\Kelas::Class)
+              <button type="submit" class="btn btn-danger ">Hapus</button>
+          @endcan    
           </form>
       </div>
     </div>
