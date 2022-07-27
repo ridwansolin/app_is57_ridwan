@@ -65,18 +65,18 @@
 
 
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">Hapus</button>
+<button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal{{$item->id}}">Hapus</button>
   
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Confirmasi !!</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-          yakin siswa {{$item->nama}} ingin dihapus?
+          yakin Data siswa <b>{{$item->nama}}</b> ingin dihapus?
       </div>
       <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
@@ -90,32 +90,7 @@
     </div>
   </div>
 </div>
-                                
-                                 {{-- <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#a{{$item->id}}">
-                                    Hapus
-                                </button>
-                                    <div class="modal fade" id="{{$item->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                     <div class="modal-dialog">
-                                         <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">Peringatan</h5>
-                                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                             </div>
-                                             <div class="modal-body">
-                                                 yakin Kelas {{$item->nama_kelas}}ingin dihapus?
-                                             </div>
-                                        <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-                                            <form method="POST" action="/kelas/{{$item->id}}">
-                                            @csrf
-                                            @method ('DELETE')
-            
-                                        <button type="submit" class="btn btn-primary ">Hapus</button>
-                                            </form>
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div> --}}
+
                                 </td>
                             </tr>
                         

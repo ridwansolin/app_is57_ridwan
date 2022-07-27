@@ -250,7 +250,7 @@
               <li class="nav-item">
                 <a href="/logout" class="nav-link" data-toggle="modal" data-target="#logoutModal">
                   <button class="btn btn-transfaran" type="button" disabled>
-                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                    <span class="spinner-grow spinner-grow-sm " role="status" aria-hidden="true"></span>
                     Log Out
                   </button>
                 </a>
@@ -286,12 +286,12 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">PERINGATAN !!!</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Confirmasi !!</h5>
                 <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
-            <div class="modal-body">Apakah Anda Yakin Ingin Keluar</div>
+            <div class="modal-body">Apakah Anda Yakin Ingin Keluar ?</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                 <a class="btn btn-primary" href="{{route('logout')}}"
